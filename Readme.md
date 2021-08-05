@@ -1,16 +1,21 @@
-### `Binary Gap` (calculate max gap of '0' in binary numbers)
+### Lesson 01 `Binary Gap` (calculate max gap of '0' in binary numbers)
+JavaScript solution
+------
+
 ```js
 function solution(N) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    let binaryNumbers = N.toString(2);
+    let convetToBinary = 2
+    let binaryNumbers = N.toString(convetToBinary);
     let maxGap = 0;
     let currentGap = 0;
 
     for (let digit of binaryNumbers) {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
         if (digit === '0') {
             currentGap++;
         } else {
-            maxGap = Math.max(maxGap, currentGap)
+            maxGap = Math.max(maxGap, currentGap) //function returns the largest of the zero or more numbers
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
             currentGap = 0;
         }
     }
