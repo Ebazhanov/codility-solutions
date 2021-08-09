@@ -25,6 +25,51 @@ console.log(solution(32))
 // binary = 100000; maxGap = 0;
 console.log(solution(529)) 
 // binary = 1000010001; maxGap = 4;
+
+Golang
+package solution
+
+import (
+	"fmt"
+	//"math"
+	"strconv"
+)
+
+var binaryNumbers = 0
+var maxGap = 0
+var currentGap int = 0
+
+func Max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
+func Solution(N int) int {
+	var binaryNumbers = strconv.FormatInt(int64(N), 2)
+	for _, digit := range binaryNumbers {
+		if digit == '0' {
+			currentGap++
+		} else {
+			maxGap = Max(maxGap, currentGap)
+
+			currentGap = 0
+		}
+
+	}
+	return maxGap
+}
+
+func main() {
+	//Max(34, 56)
+	fmt.Println(Solution(1041))
+	// binary = 10000010001; maxGap = 5;
+	fmt.Println(Solution(32))
+	// binary = 100000; maxGap = 0;
+	fmt.Println(Solution(529))
+	// binary = 1000010001; maxGap = 4;
+}
 ```
 
 ### Lesson 02 `Cyclic Rotation` (Rotate an array to the right by a given number of steps)
