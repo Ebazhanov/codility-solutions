@@ -1,5 +1,6 @@
 ### Lesson 01 `Binary Gap` (calculate max gap of '0' in binary numbers)
 
+**JavaScript**
 ```js
 function solution(N) {
     let binaryNumbers = N.toString(2);
@@ -25,13 +26,15 @@ console.log(solution(32))
 // binary = 100000; maxGap = 0;
 console.log(solution(529)) 
 // binary = 1000010001; maxGap = 4;
+```
 
-Golang
+**GoLang** :point_left:
+
+```go
 package solution
 
 import (
 	"fmt"
-	//"math"
 	"strconv"
 )
 
@@ -62,13 +65,8 @@ func Solution(N int) int {
 }
 
 func main() {
-	//Max(34, 56)
 	fmt.Println(Solution(1041))
 	// binary = 10000010001; maxGap = 5;
-	fmt.Println(Solution(32))
-	// binary = 100000; maxGap = 0;
-	fmt.Println(Solution(529))
-	// binary = 1000010001; maxGap = 4;
 }
 ```
 
