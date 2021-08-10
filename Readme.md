@@ -53,15 +53,13 @@ func Solution(N int) int {
 	var binaryNumbers = strconv.FormatInt(int64(N), 2)
 	// https://pkg.go.dev/strconv#FormatInt
 	for _, digit := range binaryNumbers {
-	    // https://gobyexample.com/range
+		// https://gobyexample.com/range
 		if digit == '0' {
 			currentGap++
 		} else {
 			maxGap = Max(maxGap, currentGap)
-
 			currentGap = 0
 		}
-
 	}
 	return maxGap
 }
