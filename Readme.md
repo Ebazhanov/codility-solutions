@@ -28,7 +28,7 @@ console.log(solution(529))
 // binary = 1000010001; maxGap = 4;
 ```
 
-[**GoLang**](https://play.golang.org/p/IpL-fCWoyNr) :point_left:
+[**GoLang**](https://goplay.tools/snippet/IpL-fCWoyNr) :point_left:
 
 ```go
 package solution
