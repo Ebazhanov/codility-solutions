@@ -28,7 +28,7 @@ console.log(solution(529))
 // binary = 1000010001; maxGap = 4;
 ```
 
-**GoLang** :point_left:
+[**GoLang**](https://play.golang.org/p/IpL-fCWoyNr) :point_left:
 
 ```go
 package solution
@@ -69,7 +69,6 @@ func main() {
 	// binary = 10000010001; maxGap = 5;
 }
 ```
-[https://play.golang.org/p/IpL-fCWoyNr](https://play.golang.org/p/IpL-fCWoyNr)
 
 ### Lesson 02 `Cyclic Rotation` (Rotate an array to the right by a given number of steps)
 
