@@ -90,5 +90,22 @@ K = 3
 console.log(solution(A, K)) 
 // [9, 7, 6, 3, 8]
 ```
+[**GoLang**](https://goplay.tools/snippet/IpL-fCWoyNr) :point_left:
 
+```go
+package solution
+
+func CyclicRotate(A[]int, K int) []int {
+	if K == 0 || len(A) == 0 || len(A) == 1 {
+		return A
+	}
+
+	if len(A) < K {
+		K = K % len(A)
+	}
+
+	lhs := A[len(A) - K:]
+
+	return append(lhs, A[:len(A) - K]...)
+}
 
