@@ -90,5 +90,28 @@ K = 3
 console.log(solution(A, K)) 
 // [9, 7, 6, 3, 8]
 ```
+[**GoLang**](https://goplay.tools/snippet/IpL-fCWoyNr) :point_left:
 
+```go
 
+package solution
+
+//import "fmt"
+
+func Solution(A []int, K int) []int {
+	if len(A) <= 1 || K == 0 {
+		return A
+	}
+	// a is the last element followed by the n elements
+	// previously before the last element
+	for i := 0; i < K; i++ {
+		A = append(A[len(A)-1:], A[:len(A)-1]...)
+	}
+	return A
+}
+// func main() {
+	// fmt.Println(Solution([]int{2,4,5,7}, 2))
+//}
+
+https://play.golang.org/p/hioaVoVwgRH
+```
