@@ -112,4 +112,39 @@ func main() {
 	fmt.Println(Solution([]int{2,4,5,7}, 2))
 	//[5 7 2 4]
 }
+
+
+Explanation:
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	/*
+	   Basically, we're getting the last value of the slice and assigning it as the first element.
+	   After that, we get all the other values that originally came before it and put them in front of the last element (which is now the first one).
+
+	   On how `[:]` works: https://tour.golang.org/moretypes/10
+	*/
+
+	// Given the original slice
+	s := []int{2, 3, 4, 7}
+	fmt.Println("s:", s)
+
+	// We get the last value in s
+	lastVal := s[len(s)-1:]
+	fmt.Println(lastVal)
+
+	// Then we get all the other values in s, except the last one
+	valuesBeforeLastVal := s[:len(s)-1]
+
+	// Finally, we assign s to receive the lastVal together with all the values that came before lastVal (valuesBeforeLastVal)
+	s = append(lastVal, valuesBeforeLastVal...)
+
+	fmt.Println("result:", s)
+}
+
 ```
